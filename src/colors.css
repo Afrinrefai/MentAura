@@ -1,0 +1,86 @@
+/* ==========================================
+   MentAura Design System - Root Variables
+   ========================================== */
+
+:root {
+  /* Primary Colors */
+  --primary-cream: #fefcf9;
+  --secondary-cream: #f8f4ef;
+  --accent-blue: #4a90e2;
+  --accent-blue-hover: #357abd;
+  --accent-blue-light: #5da8f5;
+  
+  /* Text Colors */
+  --text-primary: #2c3e50;
+  --text-secondary: #5a6c7d;
+  --text-light: #8a9aa9;
+  --text-white: #ffffff;
+  
+  /* Border & Dividers */
+  --border-light: #e8e4df;
+  --border-medium: #d4cfc7;
+  
+  /* Shadows */
+  --shadow-subtle: 0 2px 12px rgba(74, 144, 226, 0.08);
+  --shadow-medium: 0 4px 16px rgba(74, 144, 226, 0.15);
+  --shadow-strong: 0 8px 24px rgba(0, 0, 0, 0.2);
+  --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.3);
+  
+  /* Gradients */
+  --gradient-blue: linear-gradient(135deg, #4a90e2 0%, #5da8f5 100%);
+  --gradient-overlay: linear-gradient(135deg, rgba(74, 144, 226, 0.75) 0%, rgba(46, 73, 109, 0.85) 100%);
+  
+  /* Spacing */
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  
+  /* Typography */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-size-xs: 0.8rem;
+  --font-size-sm: 0.9rem;
+  --font-size-base: 0.95rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.1rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.5rem;
+  --font-size-hero: 4rem;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Z-index Layers */
+  --z-navbar: 1000;
+  --z-modal: 2000;
+  --z-tooltip: 3000;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-primary);
+  background-color: var(--primary-cream);
+  line-height: 1.6;
+  padding-top: 85px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

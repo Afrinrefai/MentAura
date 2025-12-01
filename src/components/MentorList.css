@@ -1,0 +1,460 @@
+/* MentAura - Mentor List Styles */
+
+.mentorlist-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--primary-cream) 0%, var(--secondary-cream) 100%);
+  font-family: var(--font-family);
+}
+
+.mentorlist-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 5%;
+}
+
+/* Header Section */
+.mentorlist-header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.mentorlist-title {
+  font-size: var(--font-size-hero);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+  letter-spacing: -1px;
+}
+
+.mentorlist-subtitle {
+  font-size: var(--font-size-xl);
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Search Section */
+.mentorlist-search-section {
+  background: var(--text-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-subtle);
+  margin-bottom: var(--spacing-xl);
+  border: 1px solid var(--border-light);
+}
+
+.mentorlist-search-box {
+  position: relative;
+  margin-bottom: var(--spacing-lg);
+}
+
+.mentorlist-search-icon {
+  position: absolute;
+  left: var(--spacing-md);
+  top: 50%;
+  transform: translateY(-50%);
+  stroke: var(--text-secondary);
+  pointer-events: none;
+}
+
+.mentorlist-search {
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) 50px;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--border-light);
+  font-size: var(--font-size-md);
+  background: var(--secondary-cream);
+  color: var(--text-primary);
+  transition: var(--transition-base);
+  font-family: var(--font-family);
+}
+
+.mentorlist-search:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+  background: var(--text-white);
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+/* Categories */
+.mentorlist-categories {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mentorlist-category-btn {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: 20px;
+  border: 2px solid var(--border-light);
+  background: var(--secondary-cream);
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-base);
+  font-family: var(--font-family);
+}
+
+.mentorlist-category-btn:hover {
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+  transform: translateY(-2px);
+}
+
+.mentorlist-category-btn.active {
+  background: var(--accent-blue);
+  color: var(--text-white);
+  border-color: var(--accent-blue);
+}
+
+/* Results Info */
+.mentorlist-results-info {
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.mentorlist-results-count {
+  font-size: var(--font-size-md);
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+/* Mentors Grid */
+.mentorlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+/* Mentor Card */
+.mentorlist-card {
+  background: var(--text-white);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-subtle);
+  transition: var(--transition-base);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.mentorlist-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--accent-blue);
+}
+
+/* Card Header */
+.mentorlist-card-header {
+  position: relative;
+  padding: var(--spacing-xl);
+  background: linear-gradient(135deg, rgba(74, 144, 226, 0.05) 0%, rgba(74, 144, 226, 0.1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mentorlist-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid var(--text-white);
+  box-shadow: var(--shadow-medium);
+  object-fit: cover;
+}
+
+.mentorlist-rating {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--text-white);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: #fbbf24;
+  box-shadow: var(--shadow-subtle);
+}
+
+.mentorlist-rating svg {
+  fill: #fbbf24;
+}
+
+/* Card Body */
+.mentorlist-card-body {
+  padding: var(--spacing-xl);
+  flex: 1;
+}
+
+.mentorlist-name {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.mentorlist-category {
+  font-size: var(--font-size-sm);
+  color: var(--accent-blue);
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.mentorlist-desc {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+}
+
+/* Tags */
+.mentorlist-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
+}
+
+.mentorlist-tag {
+  padding: 6px 12px;
+  background: rgba(74, 144, 226, 0.1);
+  color: var(--accent-blue);
+  border-radius: 20px;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+}
+
+/* Meta Info */
+.mentorlist-meta {
+  display: flex;
+  gap: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--border-light);
+}
+
+.mentorlist-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.mentorlist-meta-item svg {
+  stroke: var(--text-secondary);
+}
+
+/* Card Footer */
+.mentorlist-card-footer {
+  padding: 0 var(--spacing-xl) var(--spacing-xl);
+}
+
+.mentorlist-connect-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  background: var(--accent-blue);
+  color: var(--text-white);
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-base);
+  font-family: var(--font-family);
+}
+
+.mentorlist-connect-btn:hover {
+  background: var(--accent-blue-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.mentorlist-connect-btn svg {
+  stroke: var(--text-white);
+}
+
+/* Booked State */
+.mentorlist-booked {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  background: #10b981;
+  color: var(--text-white);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-md);
+  font-weight: 600;
+}
+
+.mentorlist-booked svg {
+  stroke: var(--text-white);
+}
+
+/* Slot Box */
+.mentorlist-slot-box {
+  padding: var(--spacing-lg) var(--spacing-xl) var(--spacing-xl);
+  background: var(--secondary-cream);
+  border-top: 1px solid var(--border-light);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 500px;
+  }
+}
+
+.mentorlist-slot-title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.mentorlist-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.mentorlist-slot {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--text-white);
+  color: var(--accent-blue);
+  border: 2px solid var(--accent-blue);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-base);
+  font-family: var(--font-family);
+}
+
+.mentorlist-slot:hover {
+  background: var(--accent-blue);
+  color: var(--text-white);
+  transform: scale(1.05);
+}
+
+.mentorlist-slot:hover svg {
+  stroke: var(--text-white);
+}
+
+.mentorlist-slot svg {
+  stroke: var(--accent-blue);
+  transition: var(--transition-base);
+}
+
+/* Empty State */
+.mentorlist-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-2xl) 0;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.mentorlist-empty svg {
+  stroke: var(--text-light);
+  margin-bottom: var(--spacing-lg);
+}
+
+.mentorlist-empty h3 {
+  font-size: var(--font-size-xl);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.mentorlist-empty p {
+  font-size: var(--font-size-base);
+  color: var(--text-light);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .mentorlist-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 968px) {
+  .mentorlist-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .mentorlist-subtitle {
+    font-size: var(--font-size-md);
+  }
+}
+
+@media (max-width: 768px) {
+  .mentorlist-container {
+    padding: var(--spacing-lg);
+  }
+
+  .mentorlist-search-section {
+    padding: var(--spacing-lg);
+  }
+
+  .mentorlist-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mentorlist-categories {
+    justify-content: flex-start;
+  }
+
+  .mentorlist-meta {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+}
+
+@media (max-width: 480px) {
+  .mentorlist-container {
+    padding: var(--spacing-md);
+  }
+
+  .mentorlist-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .mentorlist-subtitle {
+    font-size: var(--font-size-base);
+  }
+
+  .mentorlist-card-body {
+    padding: var(--spacing-lg);
+  }
+
+  .mentorlist-card-footer {
+    padding: 0 var(--spacing-lg) var(--spacing-lg);
+  }
+
+  .mentorlist-slot-box {
+    padding: var(--spacing-md);
+  }
+}

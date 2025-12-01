@@ -1,0 +1,45 @@
+.title {
+  background: var(--gradient-blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+}
+
+.btn {
+  background: var(--gradient-blue);
+  color: var(--text-white);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-base);
+  text-decoration: none;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-hover);
+}
+
+.inputWrapper {
+  padding: 2px;
+  border-radius: var(--radius-md);
+  background: transparent;
+}
+
+.inputWrapper:focus-within {
+  background: var(--gradient-blue);
+}
+
+.inputWrapper input {
+  border: none;
+  outline: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  width: 100%;
+  color: var(--text-primary);
+  font-size: var(--font-size-base);
+}

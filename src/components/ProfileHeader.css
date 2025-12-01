@@ -1,0 +1,180 @@
+.profileHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary-cream);
+  border-bottom: 1px solid var(--border-light);
+  z-index: var(--z-navbar);
+  box-shadow: var(--shadow-subtle);
+  font-family: var(--font-family);
+  backdrop-filter: blur(10px);
+  transition: all var(--transition-base);
+}
+
+/* Logo */
+.profileHeader-logo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  background: var(--gradient-blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.profileHeader-logo:hover {
+  transform: scale(1.02);
+}
+
+/* Right section */
+.profileHeader-right {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* Home button */
+.profileHeader-home {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: var(--font-size-md);
+  font-weight: 500;
+  cursor: pointer;
+  transition: color var(--transition-base), opacity var(--transition-base);
+  opacity: 0.85;
+}
+
+.profileHeader-home:hover {
+  opacity: 1;
+  color: var(--accent-blue-hover);
+}
+
+/* Toggle container */
+.toggleBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 140px;
+  height: 42px;
+  border-radius: 50px;
+  background: var(--secondary-cream);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-subtle);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Sliding highlight background */
+.toggleBox::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: calc(50% - 6px);
+  height: calc(100% - 6px);
+  border-radius: 50px;
+  background: var(--gradient-blue);
+  transition: transform var(--transition-base);
+  z-index: 1;
+}
+
+/* Toggle button */
+.toggleBtn {
+  flex: 1;
+  text-align: center;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  z-index: 2; /* keep text above slider */
+  transition: color var(--transition-base);
+  padding: var(--spacing-xs) 0;
+}
+
+.toggleBtn:hover {
+  opacity: 1;
+  color: var(--text-primary);
+}
+
+/* Active state text */
+.toggleBtn.active {
+  color: var(--text-white);
+  font-weight: 600;
+}
+
+/* Move slider when mentor is active */
+.toggleBtn.active:nth-child(2) ~ .toggleBox::before {
+  transform: translateX(100%);
+}
+
+/* Profile icon */
+.profileIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid var(--accent-blue);
+  box-shadow: var(--shadow-subtle);
+  transition: var(--transition-base);
+}
+
+.profileIcon:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Body padding to prevent content hiding under header */
+body {
+  padding-top: 85px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .profileHeader {
+    padding: 16px 24px;
+  }
+
+  .profileHeader-right {
+    gap: 20px;
+  }
+
+  .profileHeader-logo {
+    font-size: 1.5rem;
+  }
+
+  .profileHeader-home {
+    font-size: var(--font-size-sm);
+  }
+
+  .toggleBox {
+    width: 100px;
+    height: 36px;
+  }
+
+  .profileIcon {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profileHeader {
+    padding: 14px 16px;
+  }
+
+  .profileHeader-right {
+    gap: 12px;
+  }
+
+  .profileHeader-home {
+    font-size: var(--font-size-sm);
+  }
+}

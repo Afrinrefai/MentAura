@@ -1,0 +1,51 @@
+.faqSection {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  background: var(--primary-cream);
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.faqHeading {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-xl);
+  color: var(--accent-blue);
+}
+
+/* Accordion container */
+.faqAccordion {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left; /* 🔑 align Q&A left for readability */
+}
+
+/* Accordion Header */
+.faqAccordion .accordion-button {
+  background: var(--secondary-cream) !important;
+  color: var(--text-primary) !important;
+  font-weight: 600;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  transition: background var(--transition-base), color var(--transition-base);
+}
+
+.faqAccordion .accordion-button:hover {
+  background: var(--accent-blue-light) !important;
+  color: var(--text-white) !important;
+}
+
+/* Accordion Header when expanded */
+.faqAccordion .accordion-button:not(.collapsed) {
+  background: var(--accent-blue) !important;
+  color: var(--text-white) !important;
+  box-shadow: var(--shadow-subtle);
+}
+
+/* Accordion Body */
+.faqAccordion .accordion-body {
+  background: var(--secondary-cream) !important;
+  color: var(--text-secondary) !important;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-subtle);
+}
