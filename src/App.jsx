@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import ProfileSetup from "./Pages/SignUp/ProfileSetup";
 import Home from './Pages/Home/Home';
@@ -45,7 +45,7 @@ export default function App() {
       {/* <MentorList /> */}
       {/* <MentorDashboard /> */}
 
-
+<BrowserRouter basename='/MentAura'>
 <Routes>
   <Route path="/" index exact element={<Home />} />
   <Route path="/SignUp" element={<SignUp />} />
@@ -64,6 +64,8 @@ export default function App() {
   {/* Fallback
   <Route path="*" element={<Login />} /> */}
 </Routes>
+</BrowserRouter>
+
 
     </>
   );
